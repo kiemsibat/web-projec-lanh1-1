@@ -1,12 +1,12 @@
 pipeline{
     agent any 
     stages {
-        stage('Clone'){
+        stage('Git-Clone'){
             steps {
                 git 'https://github.com/kiemsibat/web-projec-lanh1.git'
             }
         }
-         stage('Hub-Clone'){
+         stage('Hub-push'){
             steps {
                     withDockerRegistry(credentialsId: 'docker-hub', url: 'https://index.docker.io/v1/') {
 }
