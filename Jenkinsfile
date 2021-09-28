@@ -6,14 +6,15 @@ pipeline{
                 git 'https://github.com/kiemsibat/web-projec-lanh1.git'
             }
         }
-    //      stage('Hub-Clone'){
-    //         steps {
-    //             withDockerRegistry(credentialsId: 'docker-hub', url: 'https://index.docker.io/v1/') {
-    // // some block
-    //                 sh 'docker build -t kiemsibat/testhello123:v1 .'
-    //                  sh 'docker push  kiemsibat/testhello123:v1'
-    //             }
-    //         }
-    //     }
+         stage('Hub-Clone'){
+            steps {
+                    withDockerRegistry(credentialsId: 'docker-hub', url: 'https://index.docker.io/v1/') {
+    // some block
+}
+                    sh 'docker build -t kiemsibat/testhello:v10 .'
+                    sh 'docker push kiemsibat/testhello:v10'
+                }
+            }
+        }
     }
 }
