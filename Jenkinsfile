@@ -5,7 +5,7 @@ pipeline{
             steps {
                 git 'https://github.com/kiemsibat/web-projec-lanh1.git'
             }
-        },
+        }
          stage('Hub-Clone'){
             steps {
                 withDockerRegistry(credentialsId: 'docker-hub', url: 'https://index.docker.io/v1/') {
