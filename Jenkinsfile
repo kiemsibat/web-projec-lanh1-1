@@ -14,5 +14,5 @@ pipeline{
                     sh 'docker push kiemsibat/testhello:v10'
                 }
             }
-         }
+          }
     }
