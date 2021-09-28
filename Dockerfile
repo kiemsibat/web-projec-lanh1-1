@@ -8,5 +8,5 @@ ADD https://gist.githubusercontent.com/ProProgrammer/72a87394affb0a70f54af6e6353
 # Adding read permissions to custom index.html
 RUN chmod +r /usr/share/nginx/html/index.html
 
-# 'nginx -g daemon off" 123 will run as default command when any container is run that uses the image that was built using this Dockerfile"
+# 'nginx -g daemon off" 123456 will run as default command when any container is run that uses the image that was built using this Dockerfile"
 CMD ["nginx", "-g", "daemon off;"]
