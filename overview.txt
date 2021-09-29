@@ -13,3 +13,5 @@ Cách chạy ứng dụng
 jenkins sẽ lắng nghe , nếu có sự kiện push ngay lập tức nó sẽ đọc jenkinsfile có trong thư mục trên và chạy tuần tự
 theo như trong jenkinsfile đã định nghĩa và sẽ push code về local của VM và tự động build Dockerfile ở cùng cấp với jenkins file
 và tự động đẩy nó lên repo có tên là kiemsibat/testhello:v10
+
+#testhello
