@@ -13,7 +13,7 @@ Cách chạy ứng dụng
 để chạy 1 trang web hoàn chỉnh lên và chỉnh sửa code , sau đó ta dùng các lệnh của git để push code lên 
 jenkins sẽ lắng nghe , nếu có sự kiện push ngay lập tức nó sẽ đọc jenkinsfile có trong thư mục trên và chạy tuần tự
 theo như trong jenkinsfile đã định nghĩa và sẽ push code về local của VM và tự động build Dockerfile ở cùng cấp với jenkins file
-và tự động đẩy nó lên repo có tên là kiemsibat/testhello:v10
+và tự động đẩy nó lên repo có tên là kiemsibat/testhello:v10  
 
 ## Todo list example with NodeJS, GraphQL, MongoDB, React and Docker
 
