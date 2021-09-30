@@ -8,10 +8,10 @@ pipeline{
 }    
                   
                     withCredentials([usernamePassword(credentialsId: 'docker-hub-login', passwordVariable: 'password', usernameVariable: 'kiemsibat')]) {
-                          sh 'docker build -t kiemsibat/testhello:v10 .'
+                            sh 'docker build -t kiemsibat/testhello:v10 .'
                             sh 'docker push kiemsibat/testhello:v10'
-                             sh 'docker logout'
-                             echo 'logout docker'
+                            sh 'docker logout'
+                            echo 'logout docker'
                     }
                
                 }
