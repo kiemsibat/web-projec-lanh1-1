@@ -12,11 +12,9 @@ pipeline{
                             sh 'docker build -t kiemsibat/testhello:v10 .'
                             sh 'docker logout'
                             echo 'logout docker'
-                            sh 'docker login'
+                            sh 'docker login -u kiemsibat'
                             echo 'login docker'
                             sh 'docker push kiemsibat/testhello:v10'
-                            
-                      
                     }
                
                 }
