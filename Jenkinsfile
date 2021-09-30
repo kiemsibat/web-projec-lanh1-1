@@ -7,12 +7,12 @@ pipeline{
                     withDockerRegistry(credentialsId: 'docker-hub', url: 'https://index.docker.io/v1/') {
 }    
                   
-                    withCredentials([usernamePassword(credentialsId: 'docker-hub-login', passwordVariable: 'password', usernameVariable: 'kiemsibat')]) {
+                    withCredentials([usernamePassword(credentialsId: 'docker-hub-login', passwordVariable: 'password', usernameVariable: 'username')]) {
                           
                             sh 'docker build -t kiemsibat/testhello:v10 .'
                             sh 'docker logout'
                             echo 'logout docker'
-                            sh 'docker login -u kiemsibat -p Anhlan1998vn'
+                            sh 'sudo docker login --username $username --password $password'
                             echo 'login docker'
                             sh 'docker push kiemsibat/testhello:v10'
                     }
