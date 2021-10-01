@@ -5,7 +5,7 @@ tạo ra một hệ thống tự động mỗi khi push code lên thì jenkins s
 và clone code về local và file Dockerfile sẽ tự động build ra images và push
 lên dockerhub.
 - Sử dụng docker compose để run muti container để chạy 1 web hoàn chỉnh bao gồm backend
-front end và DB 
+front end và DB   
 
 Cách chạy ứng dụng
 - Đầu tiên ta vào thư mục của web-projec-lanh1 và dùng lệnh docker-compose\
