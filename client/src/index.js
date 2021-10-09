@@ -14,7 +14,7 @@ const App = () => {
   return (
     <ApolloProvider client={client}>
       <div className="app">
-        <h2>Todos12354</h2>
+        <h2>xin chao master</h2>
         <TodoAdd />
         <TodoList />
       </div>
