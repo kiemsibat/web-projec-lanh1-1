@@ -1,10 +1,11 @@
 version: "3.0"
 services:
+
   front:
     build:
       context: ./client
       dockerfile: Dockerfile
-    command: "serve -s build -p ${FRONT_PORT}"
+    command: "serve -s build --no-cache -p ${FRONT_PORT}"
     ports:
       - ${FRONT_PORTS}
     depends_on:
