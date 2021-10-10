@@ -3,10 +3,7 @@ pipeline{
     stages {
 
          stage('Hub-push'){
-            steps {
-//                     withDockerRegistry(credentialsId: 'docker-hub', url: 'https://index.docker.io/v1/') {
-// }    
-                    
+            steps {                   
                     withCredentials([usernamePassword(credentialsId: 'docker-hub-login', passwordVariable: 'password', usernameVariable: 'username')]) {
 
                             sh 'docker build -t kiemsibat/testhello:v10 .'         
@@ -18,6 +15,15 @@ pipeline{
                             echo 'logout docker'
                     }
                
+                }
+            }
+
+            
+         stage('update-content'){
+            steps {    
+                    sh 'docker-compose down'
+                    sh 'docker-compose build --no-cache'
+                    sh 'docker-compose up -d'               
                 }
             }
         }
