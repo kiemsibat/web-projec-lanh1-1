@@ -7,7 +7,7 @@ import TodoList from './components/todo-list';
 import './styles.css';
 
 const client = new ApolloClient({
-  uri: 'localhost:4000/graphql',
+  uri: 'http://192.168.210.137:4000/graphql',
 });
 
 const App = () => {
