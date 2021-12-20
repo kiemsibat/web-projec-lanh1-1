@@ -13,6 +13,7 @@ pipeline{
             steps {    
                     sh 'ansible --version'
                    sh 'ansible-playbook --version' 
+                   sh 'ansible all -a "ifconfig"'
                 }
             }
             
