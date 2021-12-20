@@ -22,8 +22,7 @@ pipeline{
             //     }
             // }
 
-            
-         stage('Hub-push'){
+            stage('Hub-push'){
             steps {                   
                     withCredentials([usernamePassword(credentialsId: 'docker-hub-login', passwordVariable: 'password', usernameVariable: 'username')]) {
 
@@ -48,5 +47,7 @@ pipeline{
                 }
             }
         }
+
+            
         }
     }
