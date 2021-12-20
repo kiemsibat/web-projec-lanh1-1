@@ -1,5 +1,9 @@
 ---
 - hosts: all
   tasks: 
+  ##check ping
     - name: Ping check host
       ping: ~
+  # install docker
+    - name: Install Docker
+      apt: name=apache2 update_cache=yes
