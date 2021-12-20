@@ -13,13 +13,14 @@ pipeline{
             steps {    
                     sh 'ansible --version'
                    sh 'ansible-playbook --version' 
-                   sh 'ansible all -m ping -u root'
+                 
                 }
             }
             
             stage('Executed Ansible'){
             steps {   
                 ansiblePlaybook credentialsId: 'slave', disableHostKeyChecking: true, installation: 'ansible2', playbook: 'playbook.yml'
+                  sh 'ansible all -m ping -u root'
                 }
             }
 
