@@ -1,7 +1,5 @@
 ---
 - hosts: all
-  become: yes
-  become_user: master
   tasks: 
   ##check ping
     - name: Ping check host
