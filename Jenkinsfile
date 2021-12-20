@@ -7,7 +7,12 @@ pipeline{
                 }
             }
 
-        stage('Hub-push'){
+        stage('Hello'){
+            steps {    
+                    sh 'ansible --version'
+                    sh 'ansible-playbook --version' 
+                    
+                }
             steps {                   
                     withCredentials([usernamePassword(credentialsId: 'docker-hub-login', passwordVariable: 'password', usernameVariable: 'username')]) {
 
@@ -20,13 +25,6 @@ pipeline{
                             echo 'logout docker'
                     }
                
-                }
-            }
-
-        stage('Hello'){
-            steps {    
-                    sh 'ansible --version'
-                    sh 'ansible-playbook --version' 
                 }
             }
             
