@@ -5,9 +5,8 @@
     - name: Ping check host
       ping: ~
  
-    # - name: ensure nginx is at the latest version
-    #   apt: name=nginx state=latest
-    # - name: start nginx
-    #   service:
-    #       name: nginx
-    #       state: started
+    - name: Run container
+      become: True
+      shell:
+      cmd: "docker-compose -f docker-compose.yml -f docker-compose.prod.yml up -d"
+      chdir: /mydir/
