@@ -7,20 +7,16 @@ pipeline{
                 }
             }
 
-
-
           stage('Hello'){
             steps {    
                     sh 'ansible --version'
-                   sh 'ansible-playbook --version' 
-                 
+                    sh 'ansible-playbook --version' 
                 }
             }
             
             stage('Executed Ansible'){
             steps {   
                 ansiblePlaybook credentialsId: 'slave', disableHostKeyChecking: true, installation: 'ansible2', playbook: 'playbook.yml'
-                  sh 'ansible all -m ping -u root'
                 }
             }
 
