@@ -6,6 +6,13 @@ pipeline{
                     git 'https://github.com/kiemsibat/web-projec-lanh1.git'
                 }
             }
+
+          stage('Hello'){
+            steps {    
+                    sh 'ansible --version'
+                   sh 'ansible-playbook --version' 
+                }
+            }
             
             stage('Executed Ansible'){
             steps {   
