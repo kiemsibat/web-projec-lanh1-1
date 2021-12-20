@@ -5,7 +5,7 @@ WORKDIR /app
 RUN npm -g install serve
 COPY package*.json ./
 
-RUN npm install
+RUN nvm install 16.13.0
 
 COPY . .
 

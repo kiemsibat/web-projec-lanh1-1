@@ -3,7 +3,7 @@ pipeline{
     stages {
          stage('SCM Checkout'){
             steps {    
-                    git 'https://github.com/kiemsibat/awesome-compose/tree/master/react-nginx'
+                    git 'https://github.com/kiemsibat/web-projec-lanh1.git'
                 }
             }
 
