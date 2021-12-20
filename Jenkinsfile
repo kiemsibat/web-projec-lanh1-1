@@ -9,12 +9,12 @@ pipeline{
 
 
 
-          stage('Hello'){
-            steps {    
-                    sh 'ansible --version'
-                   sh 'ansible-playbook --version' 
-                }
-            }
+        //   stage('Hello'){
+        //     steps {    
+        //             sh 'ansible --version'
+        //            sh 'ansible-playbook --version' 
+        //         }
+        //     }
             
             // stage('Executed Ansible'){
             // steps {   
