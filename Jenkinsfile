@@ -18,7 +18,7 @@ pipeline{
             
             stage('Executed Ansible'){
             steps {   
-                ansiblePlaybook credentialsId: 'root', disableHostKeyChecking: true, installation: 'ansible2', playbook: 'playbook.yml'
+                ansiblePlaybook credentialsId: 'slave', disableHostKeyChecking: true, installation: 'ansible2', playbook: 'playbook.yml'
                 }
             }
 
