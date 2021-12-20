@@ -1,9 +1,13 @@
 ---
 - hosts: all
   tasks: 
-  ##check ping
+ 
     - name: Ping check host
       ping: ~
-  # install docker
-    - name: Install nginx
-      apt: name=nginx
+ 
+    - name: stop nginx
+      service:
+          name: nginx
+          state: stopped
+    - name: ensure nginx is not installed
+      apt: name=nginx state=absent
