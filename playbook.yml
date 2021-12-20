@@ -8,5 +8,5 @@
     - name: Run container
       become: True
       shell:
-        cmd: "docker-compose -f docker-compose.yml -f docker-compose.prod.yml up -d"
-        chdir: /mydir/
+        cmd: "docker-compose -f docker-compose.yml -f up -d"
+        chdir: /
