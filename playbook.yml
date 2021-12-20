@@ -5,12 +5,8 @@
     - name: Ping check host
       ping: ~
  
-    # - name: Run container
-    #   become: True
-    #   shell:
-    #     cmd: "docker-compose -f docker-compose.yml up -d"
-    #     chdir: /
-
-    - name: Ping directory
+    - name: Run container
+      become: True
       shell:
-        cmd: "pwd"
+        cmd: "docker-compose -f docker-compose.yml up -d"
+        chdir: /home/slave/jenkins/workspace/ansible-demo
