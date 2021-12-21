@@ -7,14 +7,14 @@ import TodoList from './components/todo-list';
 import './styles.css';
 
 const client = new ApolloClient({
-  uri: 'http://localhost:4000/graphql',
+  uri: 'http://192.168.226.128/graphql',
 });
 
 const App = () => {
   return (
     <ApolloProvider client={client}>
       <div className="app">
-        <h1>TodoList</h1>
+        <h1>TodoList123</h1>
         <TodoAdd />
         <TodoList />
       </div>
