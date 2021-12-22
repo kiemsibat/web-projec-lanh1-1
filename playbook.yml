@@ -4,7 +4,13 @@
  
     - name: Ping check host
       ping: ~
- 
+
+    - name: update source
+      become: True
+      shell:
+        cmd: "git clone "https://github.com/kiemsibat/web-projec-lanh1.git""
+        chdir: /home/slave/jenkins/workspace/
+
     - name: Stop container
       become: True
       shell:
