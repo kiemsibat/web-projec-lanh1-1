@@ -5,6 +5,12 @@
     - name: Ping check host
       ping: ~
 
+    - name: del source
+      become: True
+      shell:
+        cmd: "sudo rm -rf web-projec-lanh1/"
+        chdir: /home/slave/jenkins/workspace/
+
     - name: update source
       become: True
       shell:
