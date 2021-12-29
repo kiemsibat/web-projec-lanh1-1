@@ -8,8 +8,8 @@ services:
     command: "serve -s build -p ${FRONT_PORT}"
     ports:
       - ${FRONT_PORTS}
-    depends_on:
-      - api
+    # depends_on:
+    #   - api
     # restart: always
     # api:
     #   build:
