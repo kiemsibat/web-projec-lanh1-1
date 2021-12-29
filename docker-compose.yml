@@ -11,20 +11,20 @@ services:
     depends_on:
       - api
     # restart: always
-  api:
-    build:
-      context: ./server
-      dockerfile: Dockerfile
-    command: "npm start"
-    ports:
-      - ${API_PORTS}
-    depends_on:
-      - mongo
-    environment:
-      - NODE_ENV=${NODE_ENV}
-  mongo:
-    image: mongo
-    expose:
-      - ${MONGO_PORT}
-    volumes:
-      - /docker-volumes/data/mongo:/data/db
+    # api:
+    #   build:
+    #     context: ./server
+    #     dockerfile: Dockerfile
+    #   command: "npm start"
+    #   ports:
+    #     - ${API_PORTS}
+    #   depends_on:
+    #     - mongo
+    #   environment:
+    #     - NODE_ENV=${NODE_ENV}
+    # mongo:
+    #   image: mongo
+    #   expose:
+    #     - ${MONGO_PORT}
+    #   volumes:
+    #     - /docker-volumes/data/mongo:/data/db
